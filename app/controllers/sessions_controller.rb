@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
         @user = User.find_by(name: params[:user][:name])
         if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
-            redirect_to "/home"
+            redirect_to "/welcome"
         else
             flash[:notice] = "Incorrect Name or Password"
             redirect_to "/new"
