@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
 
-  get '/welcome', to: 'application#welcome'
+  get '/home', to: 'application#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
